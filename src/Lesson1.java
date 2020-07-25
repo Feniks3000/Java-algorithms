@@ -29,6 +29,7 @@ public class Lesson1 {
         int[] array = createRandomArray(30);
         System.out.println("Сгенерирован массив: " + Arrays.toString(array));
 
+        Long start = System.nanoTime();
         boolean exists = false;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == man.getAge()) {
@@ -36,12 +37,14 @@ public class Lesson1 {
                 break;
             }
         }
+        Long finish = System.nanoTime();
 
         if (exists) {
             System.out.println("В массиве есть число равное возрасту " + man.getName());
         } else {
             System.out.println("В массиве нет числа равного возрасту " + man.getName());
         }
+        System.out.println(String.format("На перебор и сравнение значений при поиске затрачено %d наносекунд", (finish - start)));
     }
 
     public static int[] createRandomArray(int count) {
