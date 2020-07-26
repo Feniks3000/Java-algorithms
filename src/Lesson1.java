@@ -26,7 +26,7 @@ public class Lesson1 {
         Man man = new Man("Иван", 34);
         System.out.println("Создан " + man.toString());
 
-        int[] array = createRandomArray(30);
+        int[] array = Helper.createRandomArray(30, 100);
         System.out.println("Сгенерирован массив: " + Arrays.toString(array));
 
         Long start = System.nanoTime();
@@ -45,14 +45,5 @@ public class Lesson1 {
             System.out.println("В массиве нет числа равного возрасту " + man.getName());
         }
         System.out.println(String.format("На перебор и сравнение значений при поиске затрачено %d наносекунд", (finish - start)));
-    }
-
-    public static int[] createRandomArray(int count) {
-        Random random = new Random();
-        int[] array = new int[count];
-        for (int i = 0; i < count; i++) {
-            array[i] = random.nextInt(100);
-        }
-        return array;
     }
 }
