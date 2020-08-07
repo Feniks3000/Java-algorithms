@@ -1,5 +1,6 @@
+import lesson1.Man;
+
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 /*

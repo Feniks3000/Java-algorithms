@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Man {
     String name;
     Integer age;
